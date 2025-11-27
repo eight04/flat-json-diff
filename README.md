@@ -17,7 +17,7 @@ Usage
 -----
 
 ```JavaScript
-import {createPatch, applyPatch} from "flat-json-diff";
+import {diff, applyPatch} from "flat-json-diff";
 
 const a = [
   {title: "foo", tags: ["a", "b"]},
@@ -28,7 +28,7 @@ const b = [
   {title: "bar", tags: ["c"]},
   {title: "baz", tags: []},
 ];
-const patch = createPatch(a, b);
+const patch = diff(a, b);
 const c = applyPatch([
   {title: "bak", tags: ["x"]},
   {title: "foo", tags: []},
