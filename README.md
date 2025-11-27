@@ -94,6 +94,10 @@ When diffing arrays, it should calculate the smallest changes between two arrays
 Changelog
 ---------
 
+* 0.1.1 (Nov 28, 2025)
+
+  - Fix: include types.
+
 * 0.1.0 (Nov 28, 2025)
 
   - First release

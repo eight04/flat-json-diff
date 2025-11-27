@@ -44,7 +44,8 @@
   "files": [
     "index.*",
     "dist",
-    "lib"
+    "lib",
+    "types"
   ],
   "type": "module",
   "types": "./types/index.d.ts",
