@@ -1,0 +1,62 @@
+{
+  "name": "flat-json-diff",
+  "version": "0.0.0",
+  "description": "An experimental library to diff JSON objects/arrays by flattening them. It can create a patch between two JSON objects/arrays, and apply the patch to another JSON object/array.",
+  "keywords": [
+    "diff",
+    "json",
+    "patch",
+    "flat",
+    "flatten",
+    "unflat",
+    "array",
+    "object",
+    "deep",
+    "compare",
+    "difference",
+    "delta"
+  ],
+  "homepage": "https://github.com/eight04/flat-json-diff",
+  "bugs": {
+    "url": "https://github.com/eight04/flat-json-diff/issues",
+    "email": "eight04@gmail.com"
+  },
+  "license": "MIT",
+  "author": "eight <eight04@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eight04/flat-json-diff.git"
+  },
+  "devDependencies": {
+    "dts-buddy": "^0.6.2",
+    "eslint": "^9.20.1",
+    "eslint-plugin-compat": "^6.0.2",
+    "shx": "^0.4.0",
+    "typescript": "5.8.x"
+  },
+  "scripts": {
+    "test": "eslint . && node --test --test-reporter spec --test-reporter-destination stdout --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info",
+    "build-types": "shx rm -rf types/* && dts-buddy",
+    "preversion": "npm test",
+    "version": "npm run build-types && git add .",
+    "postversion": "git push --follow-tags && npm publish"
+  },
+  "files": [
+    "index.*",
+    "dist",
+    "lib"
+  ],
+  "type": "module",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "diff": "^8.0.2",
+    "safe-stable-stringify": "^2.5.0"
+  }
+}
