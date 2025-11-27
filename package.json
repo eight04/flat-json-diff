@@ -1,6 +1,6 @@
 {
   "name": "flat-json-diff",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An experimental library to diff JSON objects/arrays by flattening them. It can create a patch between two JSON objects/arrays, and apply the patch to another JSON object/array.",
   "keywords": [
     "diff",
