@@ -1,4 +1,4 @@
-node_modules
-coverage
-lcov.info
-test.js
+/node_modules
+/coverage
+/lcov.info
+/test.*
